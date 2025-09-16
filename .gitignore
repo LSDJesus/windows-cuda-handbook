@@ -1,9 +1,6 @@
 # Infrastructure setup files
 lfs-server-setup/
 
-# Large wheel files (managed by Git LFS)
-wheel/
-
 # Python
 __pycache__/
 *.pyc
