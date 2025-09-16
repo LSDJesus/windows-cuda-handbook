@@ -1,6 +1,9 @@
 # Infrastructure setup files
 lfs-server-setup/
 
+# Large wheel files (managed by Git LFS)
+wheel/
+
 # Python
 __pycache__/
 *.pyc
@@ -22,3 +25,4 @@ Thumbs.db
 # Temporary files
 *.tmp
 *.log
+/wheel/Other

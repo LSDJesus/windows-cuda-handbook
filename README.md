@@ -4,6 +4,50 @@
 >
 > A curated collection of professional guides covering Windows CUDA development, troubleshooting, and optimization for popular AI/ML libraries including PyTorch, Mamba-SSM, Flash-Attention, xFormers, and more.
 
+## 📦 Prebuilt Wheels
+
+This repository includes prebuilt wheel files for common CUDA-enabled packages. These are stored using **Git LFS** with Google Cloud Storage backend to keep repository sizes manageable.
+
+### 🚫 Automatic Download Disabled
+
+By default, wheel files in the `wheel/` directory are **not downloaded** when cloning this repository. This prevents large downloads for users who only need the documentation.
+
+**Configuration applied:**
+- `git config lfs.fetchexclude "wheel/"` - Excludes wheel directory from automatic fetches
+- `git config lfs.pullexclude "wheel/"` - Excludes wheel directory from automatic pulls
+
+### 📥 Downloading Wheels When Needed
+
+If you need the prebuilt wheels:
+
+```bash
+# Download all wheel files
+git lfs pull --include="wheel/"
+
+# Or download everything
+git lfs pull
+```
+
+To re-enable automatic downloads for wheel files:
+```bash
+git config lfs.fetchexclude ""
+git config lfs.pullexclude ""
+```
+
+### 🔧 Repository Setup
+
+```bash
+# Clone the repository
+git clone https://github.com/LSDJesus/windows-cuda-handbook.git
+cd windows-cuda-handbook
+
+# Install Git LFS
+git lfs install
+
+# Optional: Download wheel files
+git lfs pull --include="wheel/"
+```
+
 ## 📚 Guide Collection
 
 ### Core Windows CUDA Development
@@ -40,7 +84,7 @@
 - **Cloud ML**: Follow [**Google Cloud SDK Guide**](guides/google-cloud-sdk-guide.md)
 - **Performance Optimization**: Study [**Advanced CUDA Development Guide**](guides/advanced-cuda-development-guide.md)
 
-## � System Requirements
+## 💻 System Requirements
 
 ### Minimum Requirements
 - **OS**: Windows 10/11 Pro/Enterprise
@@ -55,7 +99,7 @@
 - **Storage**: 50GB+ free space
 - **Internet**: Stable connection for package downloads
 
-## � Prerequisites Checklist
+## ✅ Prerequisites Checklist
 
 ### Environment Setup
 - [ ] [Windows CUDA Environment Hygiene](guides/windows-cuda-environment-hygiene.md) completed
@@ -91,7 +135,7 @@ pip install dist/*.whl
 - Consider [TensorRT Integration Guide](guides/tensorrt-integration-guide.md) for inference optimization
 - Review [Google Cloud SDK Guide](guides/google-cloud-sdk-guide.md) for cloud-based training
 
-## � Guide Categories
+## 📁 Guide Categories
 
 ### 🏗️ Build & Compilation
 - Windows-specific build configurations
@@ -128,6 +172,11 @@ Jump directly to library-specific guides or advanced topics based on your curren
 ### For Library Maintainers
 The advanced guides provide deep insights into optimization techniques and cross-platform compatibility considerations.
 
+## 📋 Additional Resources
+
+- [**Repository Setup Guide**](guides/README.md) - Detailed setup instructions and wheel management
+- [**Contributing Guidelines**](guides/README.md#contributing) - How to contribute new guides
+
 ## 🤝 Contributing
 
 ### Adding New Guides
@@ -150,10 +199,11 @@ This collection of guides is licensed under the MIT License. See [LICENSE](LICEN
 
 Individual guides may reference third-party libraries and tools that have their own licenses and terms of use.
 
-## � Acknowledgments
+## 🙏 Acknowledgments
 
 These guides were developed through extensive testing and troubleshooting of Windows CUDA development workflows. Special thanks to the open-source community for providing the underlying libraries and tools that make this work possible.
 
 ---
 
-*This repository serves as a comprehensive resource for Windows CUDA development. Whether you're building AI/ML libraries from source or optimizing existing workflows, these guides provide the knowledge and techniques needed for success.*
+*This repository serves as a comprehensive resource for Windows CUDA development. Whether you're building AI/ML libraries from source or optimizing existing workflows, these guides provide the knowledge and techniques needed for success.*</content>
+<parameter name="filePath">D:\AI\Github Desktop\windows-cuda-handbook\README.md

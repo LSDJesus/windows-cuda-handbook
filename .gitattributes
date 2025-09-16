@@ -1,3 +1,4 @@
 # Auto detect text files and perform LF normalization
 * text=auto
 wheel/*.whl filter=lfs diff=lfs merge=lfs -text
+wheel/Other/*.whl filter=lfs diff=lfs merge=lfs -text
